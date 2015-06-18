@@ -3,7 +3,6 @@
     "type": "composer-installer",
     "license": "MIT",
     "description": "Installs RadPHP bundles to the \"bundles\" directory.",
-    "minimum-stability": "dev",
     "keywords": ["RadPHP", "installer", "composer"],
     "authors": [
         {
