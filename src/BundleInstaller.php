@@ -2,12 +2,14 @@
 
 namespace Rad\Composer;
 
+use Composer\Installer\LibraryInstaller;
+
 /**
  * Composer Bundle Installer
  *
  * @package Rad\Composer
  */
-class BundleInstaller
+class BundleInstaller extends LibraryInstaller
 {
 
 }
