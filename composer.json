@@ -1,0 +1,31 @@
+{
+    "name": "radphp/composer-installer",
+    "type": "composer-installer",
+    "license": "MIT",
+    "description": "Installs RadPHP bundles to the \"bundles\" directory.",
+    "minimum-stability": "dev",
+    "keywords": ["RadPHP", "installer", "composer"],
+    "authors": [
+        {
+            "name": "Mohammad Abdoli Rad",
+            "email": "m.abdolirad@gmail.com",
+            "role": "Project Founder"
+        },
+        {
+            "name": "Omid Mottaghi Rad",
+            "email": "omidmr@gmail.com",
+            "role": "Project Founder"
+        }
+    ],
+    "require-dev": {
+        "composer/composer": "~1.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "Rad\\Composer\\": "src/"
+        }
+    },
+    "extra" : {
+        "class" : "Rad\\Composer\\BundleInstaller"
+    }
+}
