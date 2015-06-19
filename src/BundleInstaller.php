@@ -138,7 +138,7 @@ class BundleInstaller extends LibraryInstaller
             $bundleConf = [
                 'bundles' => [
                     $this->getPackageName($package) => [
-                        'namespace' => str_replace('\\', '\\\\', $this->getPrimaryNamespace($package)),
+                        'namespace' => str_replace('\\', '\\', $this->getPrimaryNamespace($package)),
                         'options' => ['autoload' => true, 'bootstrap' => true]
                     ]
                 ]
