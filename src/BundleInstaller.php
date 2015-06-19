@@ -47,6 +47,15 @@ class BundleInstaller extends LibraryInstaller
     }
 
     /**
+     * {@inheritdoc}
+     */
+    public function update(InstalledRepositoryInterface $repo, PackageInterface $initial, PackageInterface $target)
+    {
+        parent::update($repo, $initial, $target);
+        $this->updateConfigFile($target);
+    }
+
+    /**
      * {@inheritDoc}
      */
     public function getInstallPath(PackageInterface $package)
