@@ -27,7 +27,6 @@ class BundleInstaller extends LibraryInstaller
     {
         parent::__construct($io, $composer, $type, $filesystem);
         $this->projectPath = dirname(dirname(dirname(dirname(__DIR__))));
-        require_once $this->projectPath . '/src/Config/paths.php';
     }
 
     /**
@@ -131,7 +130,8 @@ class BundleInstaller extends LibraryInstaller
      */
     private function updateConfigFile(PackageInterface $package)
     {
-        $defaultConfigFile = CONFIG . DS . 'config.default.php';
+        $defaultConfigFile = $this->projectPath . DIRECTORY_SEPARATOR .
+            'src' . DIRECTORY_SEPARATOR . 'Config' . DIRECTORY_SEPARATOR . 'config.default.php';
 
         if (is_writeable($defaultConfigFile)) {
             $output = include $defaultConfigFile;
