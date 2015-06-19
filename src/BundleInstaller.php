@@ -27,7 +27,7 @@ class BundleInstaller extends LibraryInstaller
     {
         parent::__construct($io, $composer, $type, $filesystem);
         $this->projectPath = dirname(dirname(dirname(dirname(__DIR__))));
-        require $this->projectPath . '/src/Config/paths.php';
+        require_once $this->projectPath . '/src/Config/paths.php';
     }
 
     /**
