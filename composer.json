@@ -17,7 +17,6 @@
         }
     ],
     "minimum-stability": "dev",
-    "prefer-stable": true,
     "require-dev": {
         "composer/composer": "~1.0"
     },
