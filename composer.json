@@ -16,7 +16,6 @@
             "role": "Project Founder"
         }
     ],
-    "minimum-stability": "dev",
     "require-dev": {
         "composer/composer": "~1.0"
     },
