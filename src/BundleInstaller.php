@@ -60,7 +60,7 @@ class BundleInstaller extends LibraryInstaller
      */
     public function getInstallPath(PackageInterface $package)
     {
-        return "bundles" . DIRECTORY_SEPARATOR . $this->getPackageName($package);
+        return "src" . DIRECTORY_SEPARATOR . $this->getPackageName($package);
     }
 
     /**
