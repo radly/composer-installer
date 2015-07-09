@@ -85,7 +85,7 @@ class BundleInstaller extends LibraryInstaller
 
         $packageName = str_replace('-bundle', '', $packageName);
 
-        return str_replace(' ', '', ucwords(str_replace('-', '', $packageName)));
+        return str_replace(' ', '', ucwords(str_replace('-', ' ', $packageName)));
     }
 
     /**
