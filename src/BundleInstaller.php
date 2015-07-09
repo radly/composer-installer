@@ -72,7 +72,7 @@ class BundleInstaller extends LibraryInstaller
      */
     private function getPackageName(PackageInterface $package)
     {
-        if (!is_array($package->getExtra()) && isset($package->getExtra()['installer-name'])) {
+        if (is_array($package->getExtra()) && isset($package->getExtra()['installer-name'])) {
             return $package->getExtra()['installer-name'];
         }
 
