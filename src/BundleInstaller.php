@@ -19,6 +19,7 @@ use RuntimeException;
 class BundleInstaller extends LibraryInstaller
 {
     private $projectPath;
+    const DS = DIRECTORY_SEPARATOR;
 
     /**
      * {@inheritdoc}
@@ -139,8 +140,8 @@ class BundleInstaller extends LibraryInstaller
      */
     private function updateConfigFile(PackageInterface $package)
     {
-        $defaultConfigFile = $this->projectPath . DIRECTORY_SEPARATOR .
-            'src' . DIRECTORY_SEPARATOR . 'Config' . DIRECTORY_SEPARATOR . 'config.default.php';
+        $defaultConfigFile = $this->projectPath . self::DS .
+            'App' . self::DS . 'Resource' . self::DS . 'config' . self::DS . 'config.default.php';
 
         if (is_writeable($defaultConfigFile)) {
             $output = include $defaultConfigFile;
@@ -148,7 +149,7 @@ class BundleInstaller extends LibraryInstaller
                 'bundles' => [
                     $this->getPackageName($package) => [
                         'namespace' => str_replace('\\', '\\', $this->getPrimaryNamespace($package)),
-                        'options' => ['autoload' => true, 'bootstrap' => true]
+                        'options' => []
                     ]
                 ]
             ];
