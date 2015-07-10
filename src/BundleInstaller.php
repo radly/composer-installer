@@ -147,10 +147,7 @@ class BundleInstaller extends LibraryInstaller
             $output = include $defaultConfigFile;
             $bundleConf = [
                 'bundles' => [
-                    $this->getPackageName($package) => [
-                        'namespace' => str_replace('\\', '\\', $this->getPrimaryNamespace($package)),
-                        'options' => []
-                    ]
+                    $this->getPackageName($package) => []
                 ]
             ];
 
